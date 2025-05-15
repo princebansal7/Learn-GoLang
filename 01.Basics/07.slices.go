@@ -62,7 +62,7 @@ func slices() {
 	fmt.Println(names) // [Prince John Ram-Naruto Mike]
 
 	fmt.Println("Printing whole slice:", names)            // Printing whole slice: [Prince John Ram-Naruto Mike]
-	fmt.Println("Printing 2nd value:", names[1])           // Printing 2nd value: John
+	fmt.Println("Printing 3rd value:", names[2])           // Printing 3rd value: Ram-Naruto
 	fmt.Println("Printing length of slice:", len(names))   // Printing length of slice: 4
 	fmt.Println("Printing capacity of slice:", cap(names)) // Printing capacity of slice: 4
 	fmt.Printf("Printing slice type: %T \n", names)        // Printing slice type: []string
