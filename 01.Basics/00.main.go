@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	// print()
@@ -8,7 +10,8 @@ func main() {
 	// dataTypes()
 	// userInput()
 	// operators()
-	arrays()
+	// arrays()
+	slices()
 
 	fmt.Println()
 }

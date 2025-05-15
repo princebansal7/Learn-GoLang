@@ -17,7 +17,7 @@ func arrays() {
 	// 2. Declare and initialize with values
 
 	var firstName = [5]string{"Ram", "John", "Pinku"}
-	fmt.Println(firstName[0], firstName[1], firstName[2], firstName[4]) // Ram John Pinku
+	fmt.Println(firstName[0], firstName[1], firstName[2], firstName[4]) // Ram John Pinku ""
 
 	// 3. Use ... to let Go infer the length
 
