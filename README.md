@@ -16,14 +16,14 @@
     ```sh
     go run <file-name>.go
     ```
-## Go Advantages
+### Go Advantages
 
 - Detects errors while writing the code without even compiling
 - Simple syntax like python yet efficient like C,C++
 - Fast Build, startup and run time
 - Resource efficient and same bianry runs on multiple OS
 
-## About compiling
+### About compiling
 
 - Each module should have only 1 main function so either create seperate folders for each program or keep one main function and use functions (Like I did)
 - To compile:
