@@ -22,6 +22,7 @@
 -  [Variables](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/02.variables.go)
 -  [Data types](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/03.dataTypes.go)
 -  [User Input](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/04.userInput.go)
+-  [Operators](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/05.operators.go)
 
 ### Go Advantages
 
