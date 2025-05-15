@@ -6,7 +6,8 @@ func main() {
 	// print()
 	// variables()
 	// dataTypes()
-	userInput()
+	// userInput()
+	operators()
 
 	fmt.Println()
 }
