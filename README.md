@@ -16,6 +16,13 @@
     ```sh
     go run <file-name>.go
     ```
+### Links to Navigate
+
+-  About [print](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/01.print.go)
+-  [Variables](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/01.print.go)
+-  [Data types](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/03.dataTypes.go)
+-  [User Input](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/01.print.go)
+
 ### Go Advantages
 
 - Detects errors while writing the code without even compiling

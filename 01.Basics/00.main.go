@@ -3,9 +3,10 @@ package main
 import "fmt"
 
 func main() {
-	print()
-	variables()
-	dataTypes()
+	// print()
+	// variables()
+	// dataTypes()
+	userInput()
 
 	fmt.Println()
 }
