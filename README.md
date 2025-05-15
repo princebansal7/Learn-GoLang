@@ -19,7 +19,7 @@
 ### Go Advantages
 
 - Detects errors while writing the code without even compiling
-- Simple syntax like python yet efficient like C,C++
+- Simple syntax like python yet efficient like C, C++
 - Fast Build, startup and run time
 - Resource efficient and same bianry runs on multiple OS
 
