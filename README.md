@@ -25,6 +25,7 @@
 -  [Operators](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/05.operators.go)
 -  [Arrays](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/06.arrays.go)
 -  [Slices](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/07.slices.go)
+-  [for loop](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/08.loops.go)
 
 ### Go Advantages
 
