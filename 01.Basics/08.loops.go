@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func loops() {
 	// - GO have only one type of loop - for loop
@@ -27,7 +30,9 @@ func loops() {
 		break
 	}
 
-	// 4. Loop over a slice or array (using range)
+	// 4. (for each loop) Loop over a slice or array (using range)
+	//    - range allows to iterate over elements for different data structures
+	//    - for arrays and slices, it provides the 'index' and 'value' for each element (as they have indexes)
 
 	nums := []int{10, 20, 30, 40, 50}
 	for index, value := range nums {
@@ -87,6 +92,28 @@ outer:
 			fmt.Println(i, j)
 		}
 	}
+
+	// 10. using strings package to slice names and put only the first names in new array
+
+	names := []string{"Prince Bansal", "Naurto Uzumaki", "Tanjiro Kamdado"}
+	fmt.Println("List of Names:", names)
+
+	fNames := []string{}
+	lNames := []string{}
+
+	for _, name := range names {
+		var eachName = strings.Fields(name) // Fields: used to splits the given string around each instance of one or more consecutive white space characters
+		var fName = eachName[0]
+		var lName = eachName[1]
+
+		fNames = append(fNames, fName)
+		lNames = append(lNames, lName)
+	}
+
+	fmt.Print("List of fist names: ")
+	fmt.Println(fNames)
+	fmt.Print("List of last names: ")
+	fmt.Println(lNames)
 
 	fmt.Println()
 }
