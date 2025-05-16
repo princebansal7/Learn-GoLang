@@ -10,7 +10,8 @@ func main() {
 	// operators()
 	// arrays()
 	// slices()
-	loops()
+	// loops()
+	if_else()
 
 	fmt.Println()
 }

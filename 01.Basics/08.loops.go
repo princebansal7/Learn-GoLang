@@ -30,6 +30,14 @@ func loops() {
 		break
 	}
 
+	// same as writing true in condition part, above way is recommended way
+
+	for true {
+		fmt.Println("Infinite loop")
+		// Use break or some condition to exit
+		break
+	}
+
 	// 4. (for each loop) Loop over a slice or array (using range)
 	//    - range allows to iterate over elements for different data structures
 	//    - for arrays and slices, it provides the 'index' and 'value' for each element (as they have indexes)
