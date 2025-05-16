@@ -16,5 +16,5 @@ func variables() {
 	// constant values
 
 	const year = 1998
-	println("Birth Year:", year)
+	fmt.Println("Birth Year:", year)
 }

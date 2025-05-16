@@ -11,7 +11,8 @@ func main() {
 	// userInput()
 	// operators()
 	// arrays()
-	slices()
+	// slices()
+	loops()
 
 	fmt.Println()
 }
