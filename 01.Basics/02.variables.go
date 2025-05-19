@@ -66,4 +66,9 @@ func variables() {
 	var r string  // ""
 	var s bool    // false
 	fmt.Println(p, q, r, s)
+
+	// NOTE: variable scope:
+	//      - local variables: defined inside a function, loop or block
+	//      - package variable: starting with lowercase name, variables defined inside a file
+	//      - global variables: starting with uppercase, available across module (see package example in README)
 }

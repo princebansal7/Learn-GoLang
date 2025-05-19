@@ -87,7 +87,7 @@
 
     import "fmt"
 
-    // Exported function (starts with capital letter)
+    // Exported function (starts with capital, same can be done for variables)
     func SayHello(name string) {
         fmt.Println("Hello,", name)
     }
