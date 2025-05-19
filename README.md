@@ -27,6 +27,7 @@
 -  [Slices](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/07.slices.go)
 -  [for loop](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/08.loops.go)
 -  [if-else](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/09.if_else.go)
+-  [switch-case](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/10.switch_case.go)
 
 ### Go Advantages
 

@@ -50,7 +50,7 @@ func switch_case() {
 	switch x {
 	case 1:
 		fmt.Println("One")
-		fallthrough // matches and still go to next case using 'fallthrough' keyword
+		fallthrough // matches and still goes to the next case using 'fallthrough' keyword
 	case 2:
 		fmt.Println("Two")
 	case 3:
