@@ -35,16 +35,16 @@
 - Detects errors while writing the code without even compiling
 - Simple syntax like python yet efficient like C, C++
 - Fast Build, startup and run time
-- Resource efficient and same bianry runs on multiple OS
+- Resource efficient and same binary runs on multiple OS
 
 ### About compiling
 
-- Each module should have only 1 main function so either create seperate folders for each program or keep one main function and use functions (Like I did)
+- Each module should have only 1 main function so either create separate folders for each program or keep one main function and use functions (Like I did)
 - To compile:
   ```sh
   go run .
   ```
-- Pass all the files whoes functions are present in main file, so that it can compile them (compile them in any other, order of execution will be in sequence the way you called the functions)
+- Pass all the files whose functions are present in main file, so that it can compile them (compile them in any other, order of execution will be in sequence the way you called the functions)
   ```sh
   go run 00.main.go 02.variables.go 01.print.go
   ```
@@ -64,3 +64,50 @@
         
          `go run main.go`
            but didn't pass print.go but print() in present in main() => error
+
+- About `packages` in **Go**
+  - Initializing Go Module
+    ```go
+    go mod init myApp
+    ```
+  - To create a package, Create a folder (greet) inside initialized module (myApp) and create go file (greet.go)
+    ```
+    myApp/
+    │
+    ├── main.go
+    └── greet/
+        └── greet.go
+    ```
+  - **Note: Use capital letters for function/variable names you want to export from your package.**
+    
+    File: `greet/greet.go`
+    ```go
+    package greet
+
+    import "fmt"
+
+    // Exported function (starts with capital letter)
+    func SayHello(name string) {
+        fmt.Println("Hello,", name)
+    }
+
+    // Unexported function (starts with lowercase letter)
+    func sayBye(name string) {
+        fmt.Println("Bye,", name)
+    }
+    ```
+  - Use the custom package in `main.go`
+  
+    File: `main.go`
+    ```go
+    package main
+
+    import (
+        "myApp/greet" // import custom package
+    )
+
+    func main() {
+        greet.SayHello("Prince")
+        // greet.sayBye("Prince")  // ❌ Cannot access unexported functions
+    }
+    ```
