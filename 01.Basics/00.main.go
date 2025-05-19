@@ -11,7 +11,8 @@ func main() {
 	// arrays()
 	// slices()
 	// loops()
-	if_else()
+	// if_else()
+	switch_case()
 
 	fmt.Println()
 }
