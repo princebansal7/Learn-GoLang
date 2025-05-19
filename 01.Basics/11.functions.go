@@ -77,6 +77,8 @@ func functions() {
 	fmt.Println()
 }
 
+// ######### FUNCTIONS ##################
+
 // 1.
 func greet() {
 	fmt.Println("Hello!")
