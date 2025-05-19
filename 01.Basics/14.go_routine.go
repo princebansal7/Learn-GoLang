@@ -2,13 +2,19 @@ package main
 
 import (
 	"fmt"
+	"sync"
 	"time"
 )
 
+// Creating WaitGroup (Step 1)
+var wg = sync.WaitGroup{}
+
 func go_routine() {
 
+	// Example 1:
+
 	fmt.Println("Hello") // executes immediately
-	welcome("Prince")    // executes after 5 seconds (we added custom delay)
+	welcome("Prince")    // executes after 4 seconds (we added custom delay)
 	fmt.Println("Bye")   // executes after welcome() executes => by default: sequential code execution
 
 	// => Executes on single thread (main thread)
@@ -22,37 +28,46 @@ func go_routine() {
 	// - hides all internal complexity like thread creation.
 	// - A goroutine is lightweight thread managed by the 'go' runtime
 
-	fmt.Println("Start")
+	// Example 2:
 
 	// Problem with using go keyword alone:
 	//  - If the main function exits, the program terminates—even if goroutines are still running.
+	//  - by default the main goroutine does NOT wait for other goroutines
 
-	go downloadFile("file1.jpg")
-	go downloadFile("file2.jpg")
+	fmt.Println("Hey")      // executes immediately
+	go welcome("Prince!!!") // runs on other goroutine for 4 seconds as per time()
+	fmt.Println("Bye Bye!") // executes immediately after "Hey", main thread completes => welcome() response doesn't show as program terminates
 
-	fmt.Println("Doing something else...")
+	// => To avoid this, we need to tell the 'main' that it needs to wait until 'welcome()' is done
+	//    - to do this create 'WaitGroup': waits for launched goroutine to finish
+	//    - use 'sync' package which provides basic synchronization functionality
+	//    - WaitGroup provides 3 functions:
+	//      - Add(): Sets the number of goroutines to wait for (add before goroutine functions, it increases the counter by provided number)
+	//      - Wait(): Blocks until the WaitGroup counter is 0 (usually put at the end of main)
+	//      - Done(): Decrements the WaitGroup counter by 1, called by the goroutine to indicate that it's finished (used in the function for which
+	//                goroutine is created for)
 
-	// Wait for goroutines to finish
-	time.Sleep(3 * time.Second)
+	fmt.Println("Hey Hey")
 
-	fmt.Println("End")
+	wg.Add(1) // (Step 2) adds below goroutine to WaitGroup (and increases the counter by 1, showing 1 goroutine is added in WaitGroup)
+	// Note: if we had 1 more goroutine function: we would do: wg.Add(2), indicating WaitGroup have 2 goroutines
 
-	// Problem with using go keyword alone:
-	//  - If the main function exits, the program terminates—even if goroutines are still running.
+	go welcome2("Prince Bansal")
+	fmt.Println("BBye!")
 
 	fmt.Println()
+	wg.Wait() // (Step 3) tells main thread to wait, until all goroutine are completed (when counter gets to 0)
 }
 
 func welcome(name string) {
-
 	// Sleep() function from time package stops or block the current thread (goroutine) execution for 5 seconds
-
-	time.Sleep(5 * time.Second)
+	time.Sleep(4 * time.Second)
 	fmt.Println("Welcome", name)
 }
 
-func downloadFile(fileName string) {
-	fmt.Println("Started downloading", fileName)
-	time.Sleep(2 * time.Second)
-	fmt.Println("Finished downloading", fileName)
+func welcome2(name string) {
+	// Sleep() function from time package stops or block the current thread (goroutine) execution for 5 seconds
+	time.Sleep(5 * time.Second)
+	fmt.Println("Welcome", name)
+	wg.Done() // (Step 4) Tells that this goroutine is done executing, and decrements the WaitGroup counter by 1
 }
