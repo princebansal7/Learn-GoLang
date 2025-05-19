@@ -40,6 +40,11 @@
 - Simple syntax like python yet efficient like C, C++
 - Fast Build, startup and run time
 - Resource efficient and same binary runs on multiple OS
+- `goroutine` is also called **Green Thread**, it's an abstraction of actual thread
+- `goroutine` managed by go runtime => we are interacting with high level goroutine, unlike other languages like `JAVA` 
+- Java threads (OS Threads) which are *managed by Kernel* and are *Hardware dependent*, *cost is higher*, have *high start time* and *no easy communication between threads*
+- `goroutine` are cheaper and lightweight => can run millions of threads without affecting the performance.
+- `goroutine` have built-in functionality called **Channels** for goroutine to talk to each other => allows easy and safe communications between goroutine => makes easy to handle concurrency issues when threads have shared data or depends on each other.
 
 ### About compiling
 

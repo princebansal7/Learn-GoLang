@@ -71,3 +71,19 @@ func welcome2(name string) {
 	fmt.Println("Welcome", name)
 	wg.Done() // (Step 4) Tells that this goroutine is done executing, and decrements the WaitGroup counter by 1
 }
+
+/*
+OUTPUT:
+
+	Hello
+	Welcome Prince
+	Bye
+	Hey
+	Bye Bye!
+	Hey Hey
+	BBye!
+
+	Welcome Prince!!!
+	Welcome Prince Bansal
+
+*/
