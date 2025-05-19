@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	// print()
@@ -13,7 +15,8 @@ func main() {
 	// loops()
 	// if_else()
 	// switch_case()
-	functions()
+	// functions()
+	maps()
 
 	fmt.Println()
 }
