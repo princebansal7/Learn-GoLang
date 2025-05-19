@@ -13,6 +13,13 @@ func slices() {
 	var ages []int
 	fmt.Println(ages) // []
 
+	emptySlice := make([]int, 5) // length = 5, capacity = 5, values = [0 0 0 0 0]
+	fmt.Println(emptySlice)
+	emptySlice2 := make([]int, 5, 10) // length = 5, capacity = 10
+	fmt.Println(emptySlice2)
+	emptySlice3 := make([]int, 0) // length = 0, capacity = 0
+	fmt.Println(emptySlice3)      // []
+
 	// 2. Declare slice and initialize with values
 
 	var firstName = []string{"Ram", "John", "Pinku"}
