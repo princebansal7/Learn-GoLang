@@ -65,7 +65,7 @@
          `go run main.go`
            but didn't pass print.go but print() in present in main() => error
 
-- About `packages` in **Go**
+### About `packages` in **Go**
   - Initializing Go Module
     ```go
     go mod init myApp
