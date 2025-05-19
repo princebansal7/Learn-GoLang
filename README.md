@@ -29,6 +29,7 @@
 -  [if-else](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/09.if_else.go)
 -  [switch-case](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/10.switch_case.go)
 -  [functions](https://github.com/princebansal7/Learn-GoLang/blob/main/01.Basics/11.functions.go)
+-  [packages](https://github.com/princebansal7/Learn-GoLang/tree/main?tab=readme-ov-file#about-packages-in-go)
 
 ### Go Advantages
 
