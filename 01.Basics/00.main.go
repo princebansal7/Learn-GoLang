@@ -12,7 +12,8 @@ func main() {
 	// slices()
 	// loops()
 	// if_else()
-	switch_case()
+	// switch_case()
+	functions()
 
 	fmt.Println()
 }
