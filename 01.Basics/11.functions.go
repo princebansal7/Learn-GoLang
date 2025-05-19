@@ -39,7 +39,7 @@ func functions() {
 	// 5. Named return value
 
 	area := calcArea(10, 20)
-	fmt.Println("Area of reactangle is:", area)
+	fmt.Println("Area of rectangle is:", area)
 
 	// 6. Variadic Functions (Takes variable number of arguments)
 
@@ -52,11 +52,11 @@ func functions() {
 	}() // note the () to invoke it
 
 	// - with args and return
-	muliplication := func(a, b int) int {
+	multiplication := func(a, b int) int {
 		return a * b
 	}(2, 3)
 
-	fmt.Println("Multiplication is:", muliplication) // 5
+	fmt.Println("Multiplication is:", multiplication) // 5
 
 	// 8. Function Assigned to a Variable
 

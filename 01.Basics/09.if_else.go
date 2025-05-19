@@ -29,7 +29,7 @@ func if_else() {
 	} else if n < 0 {
 		fmt.Printf("%v is a Negative number\n", n)
 	} else {
-		fmt.Printf("%v is neither postive nor negative\n", n)
+		fmt.Printf("%v is neither positive nor negative\n", n)
 	}
 
 	// 4. if-else can be used input validation
