@@ -16,7 +16,8 @@ func main() {
 	// if_else()
 	// switch_case()
 	// functions()
-	maps()
+	// maps()
+	structType()
 
 	fmt.Println()
 }
