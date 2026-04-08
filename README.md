@@ -53,7 +53,7 @@
   ```sh
   go run .
   ```
-- Pass all the files whose functions are present in main file, so that it can compile them (compile them in any other, order of execution will be in sequence the way you called the functions)
+- Pass all the files whose functions are present in main file, so that it can compile them (compile them in any order, order of execution will be in sequence the way you called the functions)
   ```sh
   go run 00.main.go 02.variables.go 01.print.go
   ```
